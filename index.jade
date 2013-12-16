@@ -10,8 +10,6 @@ html
 		link(rel = 'stylesheet', type = 'text/css', href = 'static/css/brackets.css')
 	body
 		.wrapper
-			h1: a(href=templateData.homeURL)=project.title
-			p=templateData.subtitle
 			ul.feature-list
 				- each component in document.components
 					- if(!component.eof)
@@ -32,5 +30,8 @@ html
 											h4 CSS
 											pre.css
 												code(data-language="css")=component.css
+			footer
+				p
+					a(href=templateData.homeURL)=project.title+": "+project.subtitle
 		script(src="static/js/rainbow-custom.min.js")
 		script(src='static/js/main.js')
