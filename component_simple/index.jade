@@ -5,13 +5,5 @@ html
 		meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge')
 		title=project.title
 		meta(name="viewport", content="width=device-width,initial-scale = 1.0")
-		link(rel = 'stylesheet', type = 'text/css', href = 'static/demo/demo.css')
 		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
-	body
-		.wrapper
-			ul.feature-list
-				- each component in document.components
-					- if(!component.eof)
-						li.feature-list_item(id=component.slug)
-							h3.feature-list_header=component.name
-							section.component!=component.markup
+	body!=component.markup
