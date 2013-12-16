@@ -29,3 +29,7 @@ body {
   height: 1em;
   background: #FF9E1B;
 }
+
+.code {
+  display: none;
+}
