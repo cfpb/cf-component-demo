@@ -25,7 +25,8 @@
     "node": ">=0.8.0"
   },
   "devDependencies": {
-    "jade": "~0.31.2"
+    "jade": "~0.31.2",
+    "topdoc-theme": "~0.4.0"
   },
   "keywords": []
 }
