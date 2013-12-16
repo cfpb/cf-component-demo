@@ -17,7 +17,7 @@ html
 							h3.feature-list_header=component.name
 							section.component!=component.markup
 							footer.feature-list_footer
-								p.showcode
+								div.showcode
 									a(href="#") Show code snippets
 								section.code
 									- if(component.markup)
@@ -30,7 +30,5 @@ html
 											h4 CSS
 											pre.css
 												code(data-language="css")=component.css
-			footer.feature-list_footer
-				a(href=templateData.homeURL)=project.title
 		script(src="static/js/rainbow-custom.min.js")
 		script(src='static/js/main.js')
