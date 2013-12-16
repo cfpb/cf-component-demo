@@ -14,7 +14,7 @@ html
 					- if(!component.eof)
 						li.demo-list_item(id=component.slug)
 							h3.demo-list_header=component.name
-							section.component!=component.markup
+							section!=component.markup
 							footer.demo-list_footer
 								div.showcode
 									a(href="#") Show code snippets
