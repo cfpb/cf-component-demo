@@ -9,16 +9,16 @@ html
 		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
 	body
 		.wrapper
-			ul.feature-list
+			ul.demo-list
 				- each component in document.components
 					- if(!component.eof)
-						li.feature-list_item(id=component.slug)
-							h3.feature-list_header=component.name
+						li.demo-list_item(id=component.slug)
+							h3.demo-list_header=component.name
 							section.component!=component.markup
-							footer.feature-list_footer
+							footer.demo-list_footer
 								div.showcode
 									a(href="#") Show code snippets
-								section.code
+								section.demo-list_code
 									- if(component.markup)
 										div
 											h4 HTML

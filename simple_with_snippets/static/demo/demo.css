@@ -8,23 +8,23 @@ body {
   padding: 1.375em;
 }
 
-.feature-list,
-.feature-list_item {
+.demo-list,
+.demo-list_item {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.feature-list_item {
+.demo-list_item {
   padding: 2em 0;
   border-bottom: 1px solid black;
 }
 
-.feature-list_item:first-child {
+.demo-list_item:first-child {
   border-top: 1px solid black;
 }
 
-.feature-list_show-col:before {
+.demo-list_show-col:before {
   content: "";
   display: block;
   width: 100%;
@@ -32,11 +32,11 @@ body {
   background: #FF9E1B;
 }
 
-.feature-list_footer {
+.demo-list_footer {
   margin-top: 1.375em;
 }
 
-.code {
+.demo-list_code {
   display: none;
   padding-top: 1.375em;
 }
