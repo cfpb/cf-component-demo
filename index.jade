@@ -14,7 +14,7 @@ html
 			p=templateData.subtitle
 			ul.feature-list
 				- each component in document.components
-					- if(component.name)
+					- if(!component.eof)
 						li.feature-list_item(id=component.slug)
 							h3.feature-list_header=component.name
 							section.component!=component.markup
