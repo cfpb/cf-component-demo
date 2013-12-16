@@ -1,0 +1,40 @@
+!!! 5
+html
+	head
+		meta(charset = 'utf-8')
+		meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge')
+		title=project.title
+		meta(name="viewport", content="width=device-width,initial-scale = 1.0")
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/fj-component-demo.css')
+		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
+		link(rel = 'stylesheet', type = 'text/css', href = 'css/brackets.css')
+	body
+		.wrapper
+			h1: a(href=templateData.homeURL)=project.title
+			p=templateData.subtitle
+			ul.feature-list
+				- each component in document.components
+					li.feature-list_item(id=component.slug)
+						h3.feature-list_header=component.name
+						section.component!=component.markup
+						- if(component.examples)
+							section.examples
+								h4 Examples
+								ul
+									- each example_url, example_text in component.examples
+										li: a(href = example_url)!= example_text
+						footer
+							div.showcode
+								a(href="#") Show code snippets
+							section.code
+								div
+									h3 HTML
+									pre.html
+										code(data-language="html")=component.markup
+								div
+									h3 CSS
+									pre.css
+										code(data-language="css")=component.css
+			footer
+		script(src="static/js/rainbow-custom.min.js")
+		script(src='static/js/main.js')
