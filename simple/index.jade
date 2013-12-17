@@ -8,10 +8,14 @@ html
 		link(rel = 'stylesheet', type = 'text/css', href = 'static/demo/demo.css')
 		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
 	body
-		ul.demo-list
-			- each component in document.components
-				- if(!component.eof)
-					each pattern in component.patterns
-						li.demo-list_item(id=pattern.slug)
-							h3.demo-list_header=pattern.name
-							section!=pattern.markup
+		ul.demo-component-list
+			each component in document.components
+				if(!component.eof)
+					li.demo-component-list_item(id=component.slug)
+						h2=component.name
+						ul.demo-pattern-list
+							each pattern in component.patterns
+								li.demo-pattern-list_item(id=pattern.slug)
+									div.demo-pattern-list_header
+										h3=pattern.name
+									div!=pattern.markup
