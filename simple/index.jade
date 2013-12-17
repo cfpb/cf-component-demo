@@ -12,6 +12,7 @@ html
 			ul.demo-list
 				- each component in document.components
 					- if(!component.eof)
-						li.demo-list_item(id=component.slug)
-							h3.demo-list_header=component.name
-							section!=component.markup
+						each val in component.pattern
+						li.demo-list_item(id=component.pattern.slug)
+							h3.demo-list_header=component.pattern.name
+							section!=component.pattern.markup
