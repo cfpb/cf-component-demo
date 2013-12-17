@@ -7,6 +7,10 @@ html
 		meta(name="viewport", content="width=device-width,initial-scale = 1.0")
 		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
 	body
-		- each component in document.components
-			- if(!component.eof)
-				div!=component.markup
+		each component in document.components
+			if(!component.eof)
+				div(id=component.slug)
+					each pattern in component.patterns
+						div(id=pattern.slug)
+							div!=pattern.markup
+							br
