@@ -9,26 +9,24 @@ html
 		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
 		link(rel = 'stylesheet', type = 'text/css', href = 'static/demo/brackets.css')
 	body
-		.wrapper
-			ul.demo-list
-				- each component in document.components
-					- if(!component.eof)
-						li.demo-list_item(id=component.slug)
-							h3.demo-list_header=component.name
-							section!=component.markup
+		ul.demo-list
+			- each component in document.components
+				- if(!component.eof)
+					each pattern in component.patterns
+						li.demo-list_item(id=pattern.slug)
+							h3.demo-list_header=pattern.name
+							section!=pattern.markup
 							footer.demo-list_footer
 								div.showcode
 									a(href="#") Show code snippets
 								section.demo-list_code
-									- if(component.markup)
-										div
-											h4 HTML
-											pre.html
-												code(data-language="html")=component.markup
-									- if(component.css)
-										div
-											h4 CSS
-											pre.css
-												code(data-language="css")=component.css
+									div
+										h4 HTML
+										pre.html
+											code(data-language="html")=component.markup
+									div
+										h4 CSS
+										pre.css
+											code(data-language="css")=component.css
 		script(src="static/demo/rainbow-custom.min.js")
 		script(src='static/demo/main.js')
