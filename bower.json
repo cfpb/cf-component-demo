@@ -1,7 +1,7 @@
 {
   "name": "fj-component-demo",
   "private": true,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "dependencies": {
     "rainbow": "git://github.com/ccampbell/rainbow.git#master"
   }
