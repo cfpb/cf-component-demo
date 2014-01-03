@@ -11,7 +11,7 @@ The rest of this readme is from the perspective of a fj-component repo.
 
 For example in [fj-buttons](https://fake.ghe.domain/flapjack/fj-buttons) we list these packages as devDependencies in package.json.
 
-```JSON
+```
 "devDependencies": {
   "grunt-topdoc": "~0.2.0",
   "fj-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
@@ -20,7 +20,7 @@ For example in [fj-buttons](https://fake.ghe.domain/flapjack/fj-buttons) we list
 
 Set up grunt-topdoc in Gruntfile.js.
 
-```JSON
+```
 topdoc: {
   docs: {
     options: {
