@@ -1,22 +1,22 @@
 fj-component-demo
 =================
 
-Topdoc templates for demoing fj components.
+[Topdoc](https://github.com/topcoat/topdoc) templates for demoing fj components.
 
 ## Getting started
 
-Use these templates in conjunction with Topdoc or grunt-topdoc.
+Use these templates in conjunction with [Topdoc](https://github.com/topcoat/topdoc) or [grunt-topdoc](https://github.com/topcoat/grunt-topdoc).
 
 The rest of this readme is from the perspective of a fj-component repo.
 
-For example in fj-buttons we list these packages as devDependencies in package.json.
+For example in [fj-buttons](https://fake.ghe.domain/flapjack/fj-buttons) we list these packages as devDependencies in package.json.
 
 ```JSON
 "devDependencies": {
   "grunt-topdoc": "~0.2.0",
   "fj-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
 }
-``
+```
 
 Set up grunt-topdoc in Gruntfile.js.
 
