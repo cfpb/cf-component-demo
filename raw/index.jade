@@ -14,9 +14,15 @@ html(lang="en")
 		title=templateData.title
 		meta(name="viewport", content="width=device-width,initial-scale = 1.0")
 		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
-		if(templateData.ieSource)
+		if(templateData.ltIE9Source)
+			//if lt IE 9
+				link(rel = 'stylesheet', type = 'text/css', href = templateData.ltIE9Source)
+		if(templateData.ltIE8Source)
 			//if lt IE 8
-				link(rel = 'stylesheet', type = 'text/css', href = templateData.ieSource)
+				link(rel = 'stylesheet', type = 'text/css', href = templateData.ltIE8Source)
+		if(templateData.html5Shiv)
+			//if lt IE 9
+				script(src="static/demo/html5shiv-printshiv.js")
 	body
 		each component in document.components
 			if(component.family == templateData.family)

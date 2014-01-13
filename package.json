@@ -1,7 +1,7 @@
 {
   "name": "fj-component-demo",
   "description": "A basic wrapper for demoing fj components.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "homepage": "http://fake.ghe.domain/pages/flapjack/fj-component-demo",
   "author": {
     "name": "Consumer Financial Protection Bureau",
@@ -27,6 +27,7 @@
   "devDependencies": {
     "grunt": "latest",
     "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-uglify": "~0.2.2",
     "jade": "~0.31.2"
   },
