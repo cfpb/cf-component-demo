@@ -4,6 +4,19 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    copy: {
+      raw_HTML5Shiv: {
+        files: [
+          {
+            expand: true,
+            src: ['bower_components/html5shiv/dist/html5shiv-printshiv.js'],
+            dest: 'raw/static/demo/',
+            flatten: true
+          }
+        ]
+      }
+    },
+
     uglify: {
       code_examples: {
         src: [
@@ -17,9 +30,11 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['copy', 'uglify']);
+  grunt.registerTask('raw', ['copy:raw_HTML5Shiv']);
   grunt.registerTask('code_examples', ['uglify:code_examples']);
 
 };
