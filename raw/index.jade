@@ -1,28 +1,44 @@
 !!! 5
+= '\n'
 //if lt IE 7
 	<html class="lt-ie9 lt-ie8 lt-ie7">
+= '\n'
 //if IE 7
 	<html class="lt-ie9 lt-ie8">
+= '\n'
 //if IE 8
 	<html class="lt-ie9">
-// [if gt IE 8] <!
+= '\n'
+//[if gt IE 8]>
 html(lang="en")
 	// <![endif]
 	head
 		meta(charset = 'utf-8')
 		meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge')
 		title=templateData.title
-		meta(name="viewport", content="width=device-width,initial-scale = 1.0")
-		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
-		if(templateData.ltIE9Source)
+		meta(name="viewport", content="width=device-width,initial-scale=1.0")
+
+		if(templateData.ltIE9AltSource)
+			= '\n'
 			//if lt IE 9
-				link(rel = 'stylesheet', type = 'text/css', href = templateData.ltIE9Source)
+				link(rel = 'stylesheet', type = 'text/css', href = templateData.ltIE9AltSource)
+
+			//[if !IE]>
+			link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
+			//<![endif]
+		else
+			link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
+
 		if(templateData.ltIE8Source)
+			= '\n'
 			//if lt IE 8
 				link(rel = 'stylesheet', type = 'text/css', href = templateData.ltIE8Source)
+
 		if(templateData.html5Shiv)
+			= '\n'
 			//if lt IE 9
 				script(src="static/demo/html5shiv-printshiv.js")
+
 	body
 		each component in document.components
 			if(component.family == templateData.family)
