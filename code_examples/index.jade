@@ -12,28 +12,27 @@ html
 		.wrapper
 			ul.demo-component-list
 				each component in document.components
-					if(component.family == templateData.family)
-						if(!component.eof)
-							li.demo-component-list_item.wrapper(id=component.slug)
-								h1.demo-component-list_header=component.name
-								ul.demo-pattern-list
-									each pattern in component.patterns
-										li.demo-pattern-list_item(id=pattern.slug)
-											header.demo-pattern-list_header
-												if(pattern.name)
-													h3=pattern.name
-												if(pattern.notes)
-													ul
-														each note in pattern.notes
-															li=note
-											if(pattern.markup)
-												section!=pattern.markup
-												footer.demo-pattern-list_footer
-													pre.html
-														code(data-language="html")=pattern.markup.trim()
-								div.demo-pattern-css
-									pre.css
-										code(data-language="css")=component.css
+					if(component.family == templateData.family && !component.eof)
+						li.demo-component-list_item.wrapper(id=component.slug)
+							h1.demo-component-list_header=component.name
+							ul.demo-pattern-list
+								each pattern in component.patterns
+									li.demo-pattern-list_item(id=pattern.slug)
+										header.demo-pattern-list_header
+											if(pattern.name)
+												h3=pattern.name
+											if(pattern.notes)
+												ul
+													each note in pattern.notes
+														li=note
+										if(pattern.markup)
+											section!=pattern.markup
+											footer.demo-pattern-list_footer
+												pre.html
+													code(data-language="html")=pattern.markup.trim()
+							div.demo-pattern-css
+								pre.css
+									code(data-language="css")=component.css
 			footer.wrapper-footer
 				h4
 					a(href=templateData.repo) View the repository
