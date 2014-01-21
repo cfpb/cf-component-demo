@@ -20,15 +20,17 @@ html
 									each pattern in component.patterns
 										li.demo-pattern-list_item(id=pattern.slug)
 											header.demo-pattern-list_header
-												h3=pattern.name
+												if(pattern.name)
+													h3=pattern.name
 												if(pattern.notes)
 													ul
 														each note in pattern.notes
 															li=note
-											section!=pattern.markup
-											footer.demo-pattern-list_footer
-												pre.html
-													code(data-language="html")=pattern.markup.trim()
+											if(pattern.markup)
+												section!=pattern.markup
+												footer.demo-pattern-list_footer
+													pre.html
+														code(data-language="html")=pattern.markup.trim()
 								div.demo-pattern-css
 									pre.css
 										code(data-language="css")=component.css
