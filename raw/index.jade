@@ -42,7 +42,7 @@ html(lang="en")
 	body
 		each component in document.components
 			if(component.family == templateData.family)
-				if(!component.eof)
+				if(!component.eof && component.patterns)
 					div(id=component.slug)
 						each pattern in component.patterns
 							div(id=pattern.slug)
