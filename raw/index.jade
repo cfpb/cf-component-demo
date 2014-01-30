@@ -49,3 +49,5 @@ html(lang="en")
 								div!=pattern.markup
 								br
 		div(id="custom-demo")!=templateData.custom
+		if(templateData.jsBody)
+			script(src=templateData.jsBody)

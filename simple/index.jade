@@ -22,3 +22,5 @@ html
 												h3=pattern.name
 										if(pattern.markup)
 											div!=pattern.markup
+		if(templateData.jsBody)
+			script(src=templateData.jsBody)

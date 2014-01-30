@@ -56,3 +56,5 @@ html
 				h4
 					a(href=templateData.repo) View the repository
 		script(src="static/demo/main.min.js")
+		if(templateData.jsBody)
+			script(src=templateData.jsBody)
