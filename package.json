@@ -1,8 +1,8 @@
 {
-  "name": "fj-component-demo",
+  "name": "cf-component-demo",
   "description": "A basic wrapper for demoing fj components.",
   "version": "0.7.3",
-  "homepage": "http://fake.ghe.domain/pages/flapjack/fj-component-demo",
+  "homepage": "http://fake.ghe.domain/pages/flapjack/cf-component-demo",
   "author": {
     "name": "Consumer Financial Protection Bureau",
     "email": "michael.morici@cfpb.gov",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://fake.ghe.domain/flapjack/fj-component-demo.git"
+    "url": "http://fake.ghe.domain/flapjack/cf-component-demo.git"
   },
   "bugs": {
-    "url": "http://fake.ghe.domain/flapjack/fj-component-demo/issues"
+    "url": "http://fake.ghe.domain/flapjack/cf-component-demo/issues"
   },
   "licenses": [
     {
       "type": "Public Domain",
-      "url": "http://fake.ghe.domain/pages/flapjack/fj-component-demo/blob/master/LICENSE"
+      "url": "http://fake.ghe.domain/pages/flapjack/cf-component-demo/blob/master/LICENSE"
     }
   ],
   "engines": {
