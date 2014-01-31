@@ -21,10 +21,7 @@ A bare bones template that simply renders the markup for each pattern. This is a
 
 # Getting started
 
-First familiarize yourself with [Topdoc](https://github.com/topcoat/topdoc) and the [Topdoc comment specification](https://github.com/topcoat/topdoc#topdoc-comment-specification). The general idea is that you place special Topdoc comments in your stylesheet which Topdoc parses and then merges with a [Jade](http://jade-lang.com/) template. This repository contains custom templates that use custom Topdoc comment formatting and custom `grunt-topdoc` task options.
-
-*Please also read up on the [custom Topdoc comment formatting](#custom-topdoc-comment-specification) and [`grunt-topdoc` options](#custom-grunt-topdoc-options) that you can use with these templates.*
-
+First familiarize yourself with [Topdoc](https://github.com/topcoat/topdoc) and the [Topdoc comment specification](https://github.com/topcoat/topdoc#topdoc-comment-specification). The general idea is that you place special Topdoc comments in your stylesheet which Topdoc parses and then merges with a [Jade](http://jade-lang.com/) template. This repository contains custom templates that use [custom Topdoc comment formatting](#custom-topdoc-comment-specification) and [custom `grunt-topdoc` task options](#custom-grunt-topdoc-options).
 
 **These instructions are from the perspective of a Captial Framework component repository which uses `grunt-topdoc` to generate demos and docs.**
 
