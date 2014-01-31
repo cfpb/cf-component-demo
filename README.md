@@ -11,13 +11,19 @@ They are built to be consumed by [Topdoc](https://github.com/topcoat/topdoc) (A 
 
 A CSS documentation template. This template lists, labels. and exposes the CSS and HTML code for each pattern. It uses [Rainbow](http://craig.is/making/rainbows) for syntax highlighting and [html5shiv](https://github.com/aFarkas/html5shiv) to polyfill the styling of HTML5 elements in older browsers. *Note that this template uses light CSS and JS that might affect your patterns.*
 
+![code_examples template screenshot](code_examples.png)
+
 ### simple
 
 A simple template to list and label each pattern. No markup or CSS is shown. *Note that this template uses light CSS that might affect your patterns.*
 
+![simple template screenshot](simple.png)
+
 ### raw
 
 A bare bones template that simply renders the markup for each pattern. This is a good template if you want to browser test your patterns without the interference of any other CSS.
+
+![raw template screenshot](raw.png)
 
 # Getting started
 
