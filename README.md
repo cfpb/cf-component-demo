@@ -21,7 +21,7 @@ A simple template to list and label each pattern. No markup or CSS is shown.
 
 ### raw
 
-A bare bones template that simply renders the markup for each pattern. This is a good template if you want to browser test your patterns without the interference of any other CSS.
+A bare bones template that simply renders the markup for each pattern. This is a good template if you want to browser test your patterns on an isolated page.
 
 ![raw template screenshot](raw.png)
 
