@@ -159,8 +159,6 @@ We have expanded the YAML structure of what Topdoc handles out of the box. Data 
  - `templateData.ltIE8Source`: A path to use if you need to include an additional stylesheet for IE less than 8. Only used in the raw template.
  - `templateData.custom`: A string of HTML to be appended to the raw template. Use `grunt.file.read` if you want to point to a file and convert it into a string.
 
-The code_examples and raw templates support the following options within the `grunt-topdoc` task:
-
 ### Example Grunt task
 
 ```JS
