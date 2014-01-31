@@ -21,20 +21,15 @@ A bare bones template that simply renders the markup for each pattern. This is a
 
 # Getting started
 
-First familiarize yourself with Topdoc and the [Topdoc comment specification](https://github.com/topcoat/topdoc#topdoc-comment-specification). The general idea is that you place special Topdoc comments in your stylesheet which Topdoc parses and then merges with a [Jade](http://jade-lang.com/) template. This repository contains custom templates, uses custom Topdoc comment formatting, and uses custom `grunt-topdoc` task options.
+First familiarize yourself with [Topdoc](https://github.com/topcoat/topdoc) and the [Topdoc comment specification](https://github.com/topcoat/topdoc#topdoc-comment-specification). The general idea is that you place special Topdoc comments in your stylesheet which Topdoc parses and then merges with a [Jade](http://jade-lang.com/) template. This repository contains custom templates that use custom Topdoc comment formatting and custom `grunt-topdoc` task options.
 
-
-## Using these templates with a Capital Framework component
-
-These instructions are from the perspective of a Captial Framework component repository which uses `grunt-topdoc` to generate demos and docs.
+**These instructions are from the perspective of a Captial Framework component repository which uses `grunt-topdoc` to generate demos and docs.**
 
 **Requirements**
 
 You need NPM and grunt-cli.
 
-**Step 1**
-
-In `package.json` list the `grunt-topdoc` and `cf-component-demo` npm packages as `devDependencies`.
+**Step 1:** In `package.json` list the `grunt-topdoc` and `cf-component-demo` npm packages as `devDependencies`.
 
 ```JSON
 "devDependencies": {
@@ -43,25 +38,19 @@ In `package.json` list the `grunt-topdoc` and `cf-component-demo` npm packages a
 }
 ```
 
-**Step 2**
-
-Install the `devDependencies`.
+**Step 2:** Install the `devDependencies`.
 
 `$ npm install`  
 
-**Step 3**
-
-Load the `grunt-topdoc` task in `Gruntfile.js`.
+**Step 3:** Load the `grunt-topdoc` task in `Gruntfile.js`.
 
 ```JS
 grunt.loadNpmTasks('grunt-topdoc');
 ```
 
-**Step 4**
+**Step 4:** Set up the `grunt-topdoc` task in `Gruntfile.js`.
 
-Set up the `grunt-topdoc` task in `Gruntfile.js`.
-
-Remember that the `source` option is a directory containing the CSS to be parsed by Topdoc and that `destination` is the directory you want the Jade template to be exported to after merging in the Topdoc data.
+*The `source` option is a directory containing the CSS to be parsed by Topdoc and `destination` is the directory you want the Jade template to be exported to after merging in the Topdoc data.*
 
 ```JS
 topdoc: {
@@ -84,18 +73,16 @@ topdoc: {
 }
 ```
 
-**Step 5**
-
-Run the `grunt-topdoc` task.
+**Step 5:** Run the `grunt-topdoc` task.
 
 `$ grunt topdoc`
 
 Your page will be exported to the `destination` path.
 
 
-## Custom Topdoc comment specification
+# Custom Topdoc comment specification
 
-### Topdoc parameters
+## Topdoc parameters
 
 We have expanded the YAML structure of what Topdoc handles out of the box. Data that is unique to these templates are labeled with *cf-only*.
 
@@ -110,7 +97,7 @@ We have expanded the YAML structure of what Topdoc handles out of the box. Data 
  - The HTML will be rendered on the page. 
  - The code will be exposed in pre code tags.
 
-### Example comment formatting
+## Example comment formatting
 
 ```CSS
 /* topdoc
@@ -153,7 +140,7 @@ We have expanded the YAML structure of what Topdoc handles out of the box. Data 
 */
 ```
 
-## Custom `grunt-topdoc` options
+# Custom `grunt-topdoc` options
 
 - `source` (required): A directory containing CSS to be parsed and merged with a Jade template. Ignores `.min` files. Defaults to src/.
 - `destination` (required): The destination directory where the usage guides will be written.
@@ -169,7 +156,7 @@ We have expanded the YAML structure of what Topdoc handles out of the box. Data 
 
 The code_examples and raw templates support the following options within the `grunt-topdoc` task:
 
-### Example Grunt task
+## Example Grunt task
 
 ```JS
 topdoc: {
