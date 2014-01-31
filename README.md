@@ -9,13 +9,13 @@ They are built to be consumed by [Topdoc](https://github.com/topcoat/topdoc) (A 
 
 ### code_examples
 
-A CSS documentation template. This template lists, labels, and exposes the CSS and HTML code for each pattern. It uses [Rainbow](http://craig.is/making/rainbows) for syntax highlighting and [html5shiv](https://github.com/aFarkas/html5shiv) to polyfill the styling of HTML5 elements in older browsers. *Note that this template uses light CSS and JS that might affect your patterns.*
+A CSS documentation template. This template lists, labels, and exposes the CSS and HTML code for each pattern. It uses [Rainbow](http://craig.is/making/rainbows) for syntax highlighting and [html5shiv](https://github.com/aFarkas/html5shiv) to polyfill the styling of HTML5 elements in older browsers.
 
 ![code_examples template screenshot](code_examples.png)
 
 ### simple
 
-A simple template to list and label each pattern. No markup or CSS is shown. *Note that this template uses light CSS that might affect your patterns.*
+A simple template to list and label each pattern. No markup or CSS is shown.
 
 ![simple template screenshot](simple.png)
 
