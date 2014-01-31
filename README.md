@@ -145,6 +145,17 @@ We have expanded the YAML structure of what Topdoc handles out of the box. Data 
 */
 ```
 
+### Ignoring the rest of the stylesheet
+
+By default Topdoc uses all CSS after a Topdoc comment. This means that if you concatenate your CSS files together there is a chance that unrelated CSS will be associated with your last Topdoc comment. To get around this you can either make sure that your CSS is last to be concatenated or you can use the `EOF` comment block. This comment block tells Topdoc to ignore everything after it and it looks like this:
+
+```CSS
+/* topdoc
+  name: EOF
+  eof: true
+*/
+```
+
 ## Custom `grunt-topdoc` options
 
 - `source` (required): A directory containing CSS to be parsed and merged with a Jade template. Ignores `.min` files. Defaults to src/.
