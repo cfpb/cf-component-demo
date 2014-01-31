@@ -1,20 +1,21 @@
 cf-component-demo
 =================
 
-[Jade](http://jade-lang.com/) templates for creating docs and demos for
-Capital Framework components. They are built to be consumed by [Topdoc](https://github.com/topcoat/topdoc) (A tool for generating usage guides for css). We use Topdoc in a Gruntfile via the `[grunt-topdoc](https://github.com/topcoat/grunt-topdoc)` task.
+Contains [Jade](http://jade-lang.com/) templates for creating docs and demos for Capital Framework components.
 
-**cf-component-demo** comes with the following templates:
+They are built to be consumed by [Topdoc](https://github.com/topcoat/topdoc) (A tool for generating usage guides for css). We use Topdoc in a Gruntfile via the [`grunt-topdoc`](https://github.com/topcoat/grunt-topdoc) task.
 
-## code_examples
+## The templates:
+
+### code_examples
 
 A CSS documentation template. This template lists, labels. and exposes the CSS and HTML code for each pattern. It uses [Rainbow](http://craig.is/making/rainbows) for syntax highlighting and [html5shiv](https://github.com/aFarkas/html5shiv) to polyfill the styling of HTML5 elements in older browsers. *Note that this template uses light CSS and JS that might affect your patterns.*
 
-## simple
+### simple
 
 A simple template to list and label each pattern. No markup or CSS is shown. *Note that this template uses light CSS that might affect your patterns.*
 
-## raw
+### raw
 
 A bare bones template that simply renders the markup for each pattern. This is a good template if you want to browser test your patterns without the interference of any other CSS.
 
