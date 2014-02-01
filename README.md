@@ -33,7 +33,9 @@ First familiarize yourself with [Topdoc](https://github.com/topcoat/topdoc) and 
 
 **Requirements**
 
-You need NPM and grunt-cli.
+- [npm](https://npmjs.org/)
+- [grunt-cli](http://gruntjs.com/getting-started)
+- That's it! NPM will help you install everything else you need.
 
 **Step 1:** In `package.json` list the `grunt-topdoc` and `cf-component-demo` npm packages as `devDependencies`.
 
