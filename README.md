@@ -96,16 +96,16 @@ Your page will be exported to the `destination` path.
 
 We have expanded the YAML structure of what Topdoc handles out of the box. Data that is unique to these templates are labeled with *cf-only*.
 
-- `name` (required): A name for a group of patterns. Topdoc assumes everything between two Topdoc comments is a group of patterns.
-- `family` (required, *cf-only*): This should match the Capital Framework repository name in the `grunt-topdoc` options. It is used to identify the current components Topdoc comments so that it can ignore any other Topdoc comments that might come from other dependencies.
-- `tags`: An array of obligatory tags. Right now we are tagging each pattern group with the current component family and any dependency family. In the future we hope to use these tags for enhancements such as listing all patterns with a specific dependency.
-- `patterns` (*cf-only*): An array containing pattern objects. Patterns are broken up into groups, for example default buttons, secondary buttons, and tertiary buttons would all be good candidates for pattern groups. Within each group you can list the available patterns for example `.btn` and `.btn:hover` would each be their own pattern.
-- `patterns[i].name` (*cf-only*): The name of the pattern.
-- `patterns[i].codenotes`: An array of notes. Code notes are wrapped in `<pre>` and `<code>` tags and appear in a list.
-- `patterns[i].notes` (*cf-only*): An array of notes. Notes appear in a list as normal text.
-- `patterns[i].markup` (*cf-only*): You can write HTML in here and two things will happen. 
- - The HTML will be rendered on the page. 
- - The code will be exposed in pre code tags.
+| Key | | Description |
+| --- | --- | --- |
+| `name` | required | A name for a group of patterns. Topdoc assumes everything between two Topdoc comments is a group |of patterns.
+| `family` | required, *cf-only* | This should match the Capital Framework repository name in the `grunt-topdoc` options|. It is used to identify the current components Topdoc comments so that it can ignore any other Topdoc comments that might come from other dependencies.
+| `tags` | | An array of obligatory tags. Right now we are tagging each pattern group with the current component family |and any dependency family. In the future we hope to use these tags for enhancements such as listing all patterns with a specific dependency.
+| `patterns` | *cf-only* | An array containing pattern objects. Patterns are broken up into groups, for example default |buttons, secondary buttons, and tertiary buttons would all be good candidates for pattern groups. Within each group you can list the available patterns for example `.btn` and `.btn:hover` would each be their own pattern.
+| `patterns[i].name` | *cf-only* | The name of the pattern.|
+| `patterns[i].codenotes` | | An array of notes. Code notes are wrapped in `<pre>` and `<code>` tags and appear in a list.|
+| `patterns[i].notes` | *cf-only* | An array of notes. Notes appear in a list as normal text.|
+| `patterns[i].markup` | *cf-only* | You can write HTML in here and two things will happen. 1: The HTML will be rendered on the page.  2: The code will be exposed in pre code tags. |
 
 ### Example comment formatting
 
