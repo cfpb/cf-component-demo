@@ -18,7 +18,7 @@
   "licenses": [
     {
       "type": "Public Domain",
-      "url": "http://fake.ghe.domain/pages/flapjack/cf-component-demo/blob/master/LICENSE"
+      "url": "https://github.com/cfpb/fj-component-demo/blob/master/TERMS.md"
     }
   ],
   "engines": {
