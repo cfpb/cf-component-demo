@@ -1,7 +1,12 @@
 {
   "name": "cf-component-demo",
-  "private": true,
   "version": "0.7.3",
+  "authors": [
+    {
+      "name": "Consumer Financial Protection Bureau",
+      "url": "http://cfpb.github.io/"
+    }
+  ],
   "dependencies": {
     "html5shiv": "~3.7.0",
     "rainbow": "git://github.com/ccampbell/rainbow.git#master"

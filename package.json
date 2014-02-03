@@ -5,7 +5,6 @@
   "homepage": "https://fake.ghe.domain/pages/flapjack/cf-component-demo",
   "author": {
     "name": "Consumer Financial Protection Bureau",
-    "email": "michael.morici@cfpb.gov",
     "url": "http://cfpb.github.io/"
   },
   "repository": {
