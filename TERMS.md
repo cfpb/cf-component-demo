@@ -46,3 +46,5 @@ author or the affirmer.
 - The Brackets Theme by Garth Braithwaite is licensed under Apache V 2.0
 - [HTML5Shiv](https://github.com/aFarkas/html5shiv) by Alexander Farakas, et al.
   is licensed under MIT/GPL2.
+- [Rainbow](https://github.com/ccampbell/rainbow) by Craig Campbell is licensed
+  under Apache Version 2.0.
