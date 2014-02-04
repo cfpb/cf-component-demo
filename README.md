@@ -1,54 +1,67 @@
-cf-component-demo
-=================
+# cf-component-demo
 
 Contains [Jade](http://jade-lang.com/) templates for creating docs and demos for Capital Framework components.
 
-They are built to be consumed by [Topdoc](https://github.com/topcoat/topdoc) (A tool for generating usage guides for css). We use Topdoc in a Gruntfile via the [`grunt-topdoc`](https://github.com/topcoat/grunt-topdoc) task.
+They are built to be consumed by [Topdoc](https://github.com/topcoat/topdoc)
+(a tool for generating usage guides for CSS).
+We use Topdoc in a Gruntfile via the [`grunt-topdoc`](https://github.com/topcoat/grunt-topdoc) task.
 
 ## The templates:
 
 ### code_examples
 
-A CSS documentation template. This template lists, labels, and exposes the CSS and HTML code for each pattern. It uses [Rainbow](http://craig.is/making/rainbows) for syntax highlighting and [html5shiv](https://github.com/aFarkas/html5shiv) to polyfill the styling of HTML5 elements in older browsers.
+A CSS documentation template.
+This template lists, labels, and exposes the CSS and HTML code for each pattern.
+It uses [Rainbow](http://craig.is/making/rainbows) for syntax highlighting and
+[html5shiv](https://github.com/aFarkas/html5shiv) to polyfill the styling of HTML5 elements in older browsers.
 
 ![code_examples template screenshot](code_examples.png)
 
 ### simple
 
-A simple template to list and label each pattern. No markup or CSS is shown.
+A simple template to list and label each pattern.
+No markup or CSS is shown.
 
 ![simple template screenshot](simple.png)
 
 ### raw
 
-A bare bones template that simply renders the markup for each pattern. This is a good template if you want to browser test your patterns on an isolated page.
+A bare bones template that simply renders the markup for each pattern.
+This is a good template if you want to browser test your patterns on an isolated page.
 
 ![raw template screenshot](raw.png)
 
 ## Getting started
 
-First familiarize yourself with [Topdoc](https://github.com/topcoat/topdoc) and the [Topdoc comment specification](https://github.com/topcoat/topdoc#topdoc-comment-specification). The general idea is that you place special Topdoc comments in your stylesheet which Topdoc parses and then merges with a [Jade](http://jade-lang.com/) template. This repository contains custom templates that use [custom Topdoc comment formatting](#custom-topdoc-comment-specification) and [custom `grunt-topdoc` task options](#custom-grunt-topdoc-options).
+First familiarize yourself with [Topdoc](https://github.com/topcoat/topdoc) and the
+[Topdoc comment specification](https://github.com/topcoat/topdoc#topdoc-comment-specification).
+The general idea is that you place special Topdoc comments in your stylesheet
+which Topdoc parses and then merges with a [Jade](http://jade-lang.com/) template.
+This repository contains custom templates that use
+[custom Topdoc comment formatting](#custom-topdoc-comment-specification) and
+[custom `grunt-topdoc` task options](#custom-grunt-topdoc-options).
 
-**These instructions are from the perspective of a Captial Framework component repository which uses `grunt-topdoc` to generate demos and docs.**
+_These instructions are from the perspective of a Captial Framework component repository
+that uses `grunt-topdoc` to generate demos and docs._
 
 **Requirements**
 
 - [npm](https://npmjs.org/)
 - [grunt-cli](http://gruntjs.com/getting-started)
-- That's it! NPM will help you install everything else you need.
+- That's it! npm will help you install everything else you need.
 
 **Step 1:** In `package.json` list the `grunt-topdoc` and `cf-component-demo` npm packages as `devDependencies`.
 
 ```JSON
 "devDependencies": {
   "grunt-topdoc": "~0.2.0",
-  "cf-component-demo": "git://fake.ghe.domain/flapjack/cf-component-demo.git"
+  "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git"
 }
 ```
 
 **Step 2:** Install the `devDependencies`.
 
-`$ npm install`  
+`npm install`  
 
 **Step 3:** Load the `grunt-topdoc` task in `Gruntfile.js`.
 
@@ -58,7 +71,7 @@ grunt.loadNpmTasks('grunt-topdoc');
 
 **Step 4:** Set up the `grunt-topdoc` task in `Gruntfile.js`.
 
-*[Read about the custom options we set up for these templates](#custom-topdoc-comment-specification)*
+_[Read about the custom options we set up for these templates](#custom-topdoc-comment-specification)_
 
 ```JS
 topdoc: {
@@ -83,7 +96,7 @@ topdoc: {
 
 **Step 5:** Run the `grunt-topdoc` task.
 
-`$ grunt topdoc`
+`grunt topdoc`
 
 Your page will be exported to the `destination` path.
 
@@ -94,18 +107,19 @@ Your page will be exported to the `destination` path.
 
 #### Topdoc parameters
 
-We have expanded the YAML structure of what Topdoc handles out of the box. Data that is unique to these templates are labeled with *cf-only*.
+We have expanded the YAML structure of what Topdoc handles out of the box.
+Data that is unique to these templates are labeled with _cf-only_.
 
 | Key | | Description |
 | --- | --- | --- |
 | `name` | required | A name for a group of patterns. Topdoc assumes everything between two Topdoc comments is a group of patterns. |
-| `family` | required, *cf-only* | This should match the Capital Framework repository name in the `grunt-topdoc` options. It is used to identify the current components Topdoc comments so that it can ignore any other Topdoc comments that might come from other dependencies. |
+| `family` | required, _cf-only_ | This should match the Capital Framework repository name in the `grunt-topdoc` options. It is used to identify the current components Topdoc comments so that it can ignore any other Topdoc comments that might come from other dependencies. |
 | `tags` | | An array of obligatory tags. Right now we are tagging each pattern group with the current component family and any dependency family. In the future we hope to use these tags for enhancements such as listing all patterns with a specific dependency. |
-| `patterns` | *cf-only* | An array containing pattern objects. Patterns are broken up into groups. For example, default buttons, secondary buttons, and tertiary buttons, would all be good candidates for pattern groups. Within each group, you can list the available patterns; for example, `.btn` and `.btn:hover` would each be their own pattern. |
-| `patterns[i].name` | *cf-only* | The name of the pattern. |
-| `patterns[i].codenotes` | *cf-only* | An array of notes. Code notes are wrapped in `<pre>` and `<code>` tags and appear in a list. |
-| `patterns[i].notes` | *cf-only* | An array of notes. Notes appear in a list as normal text. |
-| `patterns[i].markup` | *cf-only* | You can write HTML in here and two things will happen. 1: The HTML will be rendered on the page. 2: The code will be exposed in `pre` & `code` tags. |
+| `patterns` | _cf-only_ | An array containing pattern objects. Patterns are broken up into groups. For example, default buttons, secondary buttons, and tertiary buttons, would all be good candidates for pattern groups. Within each group, you can list the available patterns; for example, `.btn` and `.btn:hover` would each be their own pattern. |
+| `patterns[i].name` | _cf-only_ | The name of the pattern. |
+| `patterns[i].codenotes` | _cf-only_ | An array of notes. Code notes are wrapped in `<pre>` and `<code>` tags and appear in a list. |
+| `patterns[i].notes` | _cf-only_ | An array of notes. Notes appear in a list as normal text. |
+| `patterns[i].markup` | _cf-only_ | You can write HTML in here and two things will happen. 1: The HTML will be rendered on the page. 2: The code will be exposed in `pre` & `code` tags. |
 
 #### Example comment formatting
 
@@ -152,7 +166,12 @@ We have expanded the YAML structure of what Topdoc handles out of the box. Data 
 
 #### Ignoring the rest of the stylesheet
 
-By default Topdoc uses all CSS after a Topdoc comment. This means that if you concatenate your CSS files together there is a chance that unrelated CSS will be associated with your last Topdoc comment. To get around this you can either make sure that your CSS is last to be concatenated or you can use the `EOF` comment block. This comment block tells Topdoc to ignore everything after it and it looks like this:
+By default, Topdoc uses all CSS after a Topdoc comment.
+This means that if you concatenate your CSS files together,
+there is a chance that unrelated CSS will be associated with your last Topdoc comment.
+To get around this, you can either make sure that your CSS is last to be concatenated
+or you can use the `EOF` comment block.
+This comment block tells Topdoc to ignore everything that comes after; it looks like this:
 
 ```CSS
 /* topdoc

@@ -1,12 +1,20 @@
 {
   "name": "cf-component-demo",
   "version": "0.7.3",
+  "description": "Contains Jade templates for creating docs and demos for Capital Framework components.",
+  "keywords": ["capital-framework", "capital", "topdoc", "documentation", "demo"],
   "authors": [
     {
       "name": "Consumer Financial Protection Bureau",
       "url": "http://cfpb.github.io/"
     }
   ],
+  "homepage": "https://github.com/cfpb/cf-component-demo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfpb/cf-component-demo.git"
+  },
+  "license": "https://github.com/cfpb/cf-component-demo/blob/master/TERMS.md",
   "dependencies": {
     "html5shiv": "~3.7.0",
     "rainbow": "git://github.com/ccampbell/rainbow.git#master"

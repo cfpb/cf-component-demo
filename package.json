@@ -1,19 +1,18 @@
 {
   "name": "cf-component-demo",
-  "description": "Contains Jade templates for creating docs and demos for Capital Framework components.",
   "version": "0.7.3",
-  "homepage": "https://fake.ghe.domain/pages/flapjack/cf-component-demo",
+  "description": "Contains Jade templates for creating docs and demos for Capital Framework components.",
+  "keywords": ["capital-framework", "capital", "topdoc", "documentation", "demo"],
   "author": {
     "name": "Consumer Financial Protection Bureau",
     "url": "http://cfpb.github.io/"
   },
+  "homepage": "https://github.com/cfpb/cf-component-demo",
   "repository": {
     "type": "git",
-    "url": "https://fake.ghe.domain/flapjack/cf-component-demo.git"
+    "url": "https://github.com/cfpb/cf-component-demo.git"
   },
-  "bugs": {
-    "url": "https://fake.ghe.domain/flapjack/cf-component-demo/issues"
-  },
+  "bugs": "https://github.com/cfpb/cf-component-demo/issues",
   "licenses": [
     {
       "type": "Public Domain",
@@ -30,5 +29,4 @@
     "grunt-contrib-uglify": "~0.2.2",
     "jade": "~0.31.2"
   },
-  "keywords": []
 }
