@@ -25,7 +25,7 @@ A bare bones template that simply renders the markup for each pattern. This is a
 
 ![raw template screenshot](raw.png)
 
-# Getting started
+## Getting started
 
 First familiarize yourself with [Topdoc](https://github.com/topcoat/topdoc) and the [Topdoc comment specification](https://github.com/topcoat/topdoc#topdoc-comment-specification). The general idea is that you place special Topdoc comments in your stylesheet which Topdoc parses and then merges with a [Jade](http://jade-lang.com/) template. This repository contains custom templates that use [custom Topdoc comment formatting](#custom-topdoc-comment-specification) and [custom `grunt-topdoc` task options](#custom-grunt-topdoc-options).
 
@@ -88,26 +88,26 @@ topdoc: {
 Your page will be exported to the `destination` path.
 
 
-# Specs
+## Specs
 
-## Custom Topdoc comment specification
+### Custom Topdoc comment specification
 
-### Topdoc parameters
+#### Topdoc parameters
 
 We have expanded the YAML structure of what Topdoc handles out of the box. Data that is unique to these templates are labeled with *cf-only*.
 
 | Key | | Description |
 | --- | --- | --- |
-| `name` | required | A name for a group of patterns. Topdoc assumes everything between two Topdoc comments is a group |of patterns.
-| `family` | required, *cf-only* | This should match the Capital Framework repository name in the `grunt-topdoc` options|. It is used to identify the current components Topdoc comments so that it can ignore any other Topdoc comments that might come from other dependencies.
-| `tags` | | An array of obligatory tags. Right now we are tagging each pattern group with the current component family |and any dependency family. In the future we hope to use these tags for enhancements such as listing all patterns with a specific dependency.
-| `patterns` | *cf-only* | An array containing pattern objects. Patterns are broken up into groups, for example default |buttons, secondary buttons, and tertiary buttons would all be good candidates for pattern groups. Within each group you can list the available patterns for example `.btn` and `.btn:hover` would each be their own pattern.
-| `patterns[i].name` | *cf-only* | The name of the pattern.|
-| `patterns[i].codenotes` | | An array of notes. Code notes are wrapped in `<pre>` and `<code>` tags and appear in a list.|
-| `patterns[i].notes` | *cf-only* | An array of notes. Notes appear in a list as normal text.|
-| `patterns[i].markup` | *cf-only* | You can write HTML in here and two things will happen. 1: The HTML will be rendered on the page.  2: The code will be exposed in pre code tags. |
+| `name` | required | A name for a group of patterns. Topdoc assumes everything between two Topdoc comments is a group of patterns. |
+| `family` | required, *cf-only* | This should match the Capital Framework repository name in the `grunt-topdoc` options. It is used to identify the current components Topdoc comments so that it can ignore any other Topdoc comments that might come from other dependencies. |
+| `tags` | | An array of obligatory tags. Right now we are tagging each pattern group with the current component family and any dependency family. In the future we hope to use these tags for enhancements such as listing all patterns with a specific dependency. |
+| `patterns` | *cf-only* | An array containing pattern objects. Patterns are broken up into groups. For example, default buttons, secondary buttons, and tertiary buttons, would all be good candidates for pattern groups. Within each group, you can list the available patterns; for example, `.btn` and `.btn:hover` would each be their own pattern. |
+| `patterns[i].name` | *cf-only* | The name of the pattern. |
+| `patterns[i].codenotes` | *cf-only* | An array of notes. Code notes are wrapped in `<pre>` and `<code>` tags and appear in a list. |
+| `patterns[i].notes` | *cf-only* | An array of notes. Notes appear in a list as normal text. |
+| `patterns[i].markup` | *cf-only* | You can write HTML in here and two things will happen. 1: The HTML will be rendered on the page. 2: The code will be exposed in `pre` & `code` tags. |
 
-### Example comment formatting
+#### Example comment formatting
 
 ```CSS
 /* topdoc
@@ -150,7 +150,7 @@ We have expanded the YAML structure of what Topdoc handles out of the box. Data 
 */
 ```
 
-### Ignoring the rest of the stylesheet
+#### Ignoring the rest of the stylesheet
 
 By default Topdoc uses all CSS after a Topdoc comment. This means that if you concatenate your CSS files together there is a chance that unrelated CSS will be associated with your last Topdoc comment. To get around this you can either make sure that your CSS is last to be concatenated or you can use the `EOF` comment block. This comment block tells Topdoc to ignore everything after it and it looks like this:
 
@@ -161,23 +161,23 @@ By default Topdoc uses all CSS after a Topdoc comment. This means that if you co
 */
 ```
 
-## Custom `grunt-topdoc` options
+### Custom `grunt-topdoc` options
 
 | Key | | Description |
 | --- | --- | --- |
-| `source` | required | A directory containing CSS to be parsed and merged with a Jade template. Ignores `.min` files. Defaults to src/.
-| `destination` | required | The destination directory where the usage guides will be written.
-| `template` | required | The path to the jade template file.  If it is a directory it will import all the sub files.
-| `templateData` | required | An object containing data to be passed to the Jade template.
-| `templateData.title` | required | A title to give to the page. It's used in `<title>`. It's also used as an `<h1>` for the page in the code_examples and simple templates.
-| `templateData.family` | required | This is the identifier that should also be used in the components Topdoc comments. It is used to ignore any other Topdoc comments that might come from dependencies.
-| `templateData.repo` | required | A link to the repository. The code_examples template uses this to link out to the source code.
-| `templateData.html5Shiv` | | You can optionally add html5 shiv to the template by setting this option to true. Set it to false or exclude this option if you don't need it. Only used in the raw template.
-| `templateData.ltIE9AltSource` | | A path to use if you need to serve an alternate version of your CSS to IE less than 9. Only used in the raw template.
-| `templateData.ltIE8Source` | | A path to use if you need to include an additional stylesheet for IE less than 8. Only used in the raw template.
-| `templateData.custom` | | A string of HTML to be appended to the raw template. Use `grunt.file.read` if you want to point to a file and convert it into a string.
+| `source` | required | A directory containing CSS to be parsed and merged with a Jade template. Ignores `.min` files. Defaults to `src/`. |
+| `destination` | required | The destination directory where the usage guides will be written. |
+| `template` | required | The path to the Jade template file. If it is a directory it will import all the sub files. |
+| `templateData` | required | An object containing data to be passed to the Jade template. |
+| `templateData.title` | required | A title to give to the page. It's used in `<title>`. It's also used as an `<h1>` for the page in the code_examples and simple templates. |
+| `templateData.family` | required | This is the identifier that should also be used in the component's Topdoc comments. It is used to ignore any other Topdoc comments that might come from dependencies. |
+| `templateData.repo` | required | A link to the repository. The code_examples template uses this to link out to the source code. |
+| `templateData.html5Shiv` | | You can optionally add the HTML5 Shiv to the template by setting this option to `true`. Set it to `false` or exclude this option if you don't need it. Only used in the raw template. |
+| `templateData.ltIE9AltSource` | | A path to use if you need to serve an alternate version of your CSS to IE less than 9. Only used in the raw template. |
+| `templateData.ltIE8Source` | | A path to use if you need to include an additional stylesheet for IE less than 8. Only used in the raw template. |
+| `templateData.custom` | | A string of HTML to be appended to the raw template. Use `grunt.file.read` if you want to point to a file and convert it into a string. |
 
-### Example Grunt task
+#### Example Grunt task
 
 ```JS
 topdoc: {
