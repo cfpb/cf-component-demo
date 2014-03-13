@@ -24,6 +24,11 @@ No markup or CSS is shown.
 
 ![simple template screenshot](simple.png)
 
+### simple-headless
+
+The same as _simple_ except with no `html,head,body` tags.
+This allows you to pull the output into another HTML file.
+
 ### raw
 
 A bare bones template that simply renders the markup for each pattern.
