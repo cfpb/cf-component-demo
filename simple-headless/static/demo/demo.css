@@ -3,11 +3,6 @@
    cf-component-demo styling
    ========================================================================== */
 
-body {
-  margin: 0;
-  padding: 1.375em;
-}
-
 .demo-component-list,
 .demo-component-list_item,
 .demo-pattern-list,
