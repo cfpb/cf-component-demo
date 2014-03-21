@@ -1,12 +1,15 @@
 # cf-component-demo
 
 Contains [Jade](http://jade-lang.com/) templates for creating docs and demos
-for Capital Framework components.
+for [Capital Framework](http://cfpb.github.io/capital-framework/) components.
 
 They are built to be consumed by [Topdoc](https://github.com/topcoat/topdoc)
 (a tool for generating usage guides for CSS).
 We use Topdoc in a Gruntfile via the [`grunt-topdoc`](https://github.com/topcoat/grunt-topdoc)
 task.
+
+If you're new to Capital Framework we encourage you to
+[start here](http://cfpb.github.io/capital-framework/).
 
 
 ## The templates:
