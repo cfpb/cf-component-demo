@@ -1,21 +1,30 @@
 # cf-component-demo
 
-Contains [Jade](http://jade-lang.com/) templates for creating docs and demos for Capital Framework components.
+Contains [Jade](http://jade-lang.com/) templates for creating docs and demos
+for [Capital Framework](http://cfpb.github.io/capital-framework/) components.
 
 They are built to be consumed by [Topdoc](https://github.com/topcoat/topdoc)
 (a tool for generating usage guides for CSS).
-We use Topdoc in a Gruntfile via the [`grunt-topdoc`](https://github.com/topcoat/grunt-topdoc) task.
+We use Topdoc in a Gruntfile via the [`grunt-topdoc`](https://github.com/topcoat/grunt-topdoc)
+task.
+
+If you're new to Capital Framework we encourage you to
+[start here](http://cfpb.github.io/capital-framework/).
+
 
 ## The templates:
+
 
 ### code_examples
 
 A CSS documentation template.
 This template lists, labels, and exposes the CSS and HTML code for each pattern.
 It uses [Rainbow](http://craig.is/making/rainbows) for syntax highlighting and
-[html5shiv](https://github.com/aFarkas/html5shiv) to polyfill the styling of HTML5 elements in older browsers.
+[html5shiv](https://github.com/aFarkas/html5shiv) to polyfill the styling of
+HTML5 elements in older browsers.
 
 ![code_examples template screenshot](code_examples.png)
+
 
 ### simple
 
@@ -24,22 +33,26 @@ No markup or CSS is shown.
 
 ![simple template screenshot](simple.png)
 
+
 ### simple-headless
 
 The same as _simple_ except with no `html,head,body` tags.
 This allows you to pull the output into another HTML file.
 
+
 ### raw
 
 A bare bones template that simply renders the markup for each pattern.
-This is a good template if you want to browser test your patterns on an isolated page.
+This is a good template if you want to browser test your patterns on an
+isolated page.
 
 ![raw template screenshot](raw.png)
 
+
 ## Getting started
 
-First familiarize yourself with [Topdoc](https://github.com/topcoat/topdoc) and the
-[Topdoc comment specification](https://github.com/topcoat/topdoc#topdoc-comment-specification).
+First familiarize yourself with [Topdoc](https://github.com/topcoat/topdoc) and
+the [Topdoc comment specification](https://github.com/topcoat/topdoc#topdoc-comment-specification).
 The general idea is that you place special Topdoc comments in your stylesheet
 which Topdoc parses and then merges with a [Jade](http://jade-lang.com/) template.
 This repository contains custom templates that use
@@ -55,7 +68,8 @@ that uses `grunt-topdoc` to generate demos and docs._
 - [grunt-cli](http://gruntjs.com/getting-started)
 - That's it! npm will help you install everything else you need.
 
-**Step 1:** In `package.json` list the `grunt-topdoc` and `cf-component-demo` npm packages as `devDependencies`.
+**Step 1:** In `package.json` list the `grunt-topdoc` and `cf-component-demo`
+npm packages as `devDependencies`.
 
 ```JSON
 "devDependencies": {
@@ -108,7 +122,9 @@ Your page will be exported to the `destination` path.
 
 ## Specs
 
+
 ### Custom Topdoc comment specification
+
 
 #### Topdoc parameters
 
@@ -125,6 +141,7 @@ Data that is unique to these templates are labeled with _cf-only_.
 | `patterns[i].codenotes` | _cf-only_ | An array of notes. Code notes are wrapped in `<pre>` and `<code>` tags and appear in a list. |
 | `patterns[i].notes` | _cf-only_ | An array of notes. Notes appear in a list as normal text. |
 | `patterns[i].markup` | _cf-only_ | You can write HTML in here and two things will happen. 1: The HTML will be rendered on the page. 2: The code will be exposed in `pre` & `code` tags. |
+
 
 #### Example comment formatting
 
@@ -169,14 +186,17 @@ Data that is unique to these templates are labeled with _cf-only_.
 */
 ```
 
+
 #### Ignoring the rest of the stylesheet
 
 By default, Topdoc uses all CSS after a Topdoc comment.
 This means that if you concatenate your CSS files together,
-there is a chance that unrelated CSS will be associated with your last Topdoc comment.
-To get around this, you can either make sure that your CSS is last to be concatenated
-or you can use the `EOF` comment block.
-This comment block tells Topdoc to ignore everything that comes after; it looks like this:
+there is a chance that unrelated CSS will be associated with your last Topdoc
+comment.
+To get around this, you can either make sure that your CSS is last to be
+concatenated or you can use the `EOF` comment block.
+This comment block tells Topdoc to ignore everything that comes after; it looks
+like this:
 
 ```CSS
 /* topdoc
@@ -184,6 +204,7 @@ This comment block tells Topdoc to ignore everything that comes after; it looks 
   eof: true
 */
 ```
+
 
 ### Custom `grunt-topdoc` options
 
@@ -200,6 +221,7 @@ This comment block tells Topdoc to ignore everything that comes after; it looks 
 | `templateData.ltIE9AltSource` | | A path to use if you need to serve an alternate version of your CSS to IE less than 9. Only used in the raw template. |
 | `templateData.ltIE8Source` | | A path to use if you need to include an additional stylesheet for IE less than 8. Only used in the raw template. |
 | `templateData.custom` | | A string of HTML to be appended to the raw template. Use `grunt.file.read` if you want to point to a file and convert it into a string. |
+
 
 #### Example Grunt task
 
