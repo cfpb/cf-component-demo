@@ -39,7 +39,7 @@ html(lang="en")
 			//if lt IE 9
 				script(src="static/demo/html5shiv-printshiv.js")
 
-	body
+	body(style="padding:4px;")
 		each component in document.components
 			if(component.family == templateData.family)
 				if(!component.eof && component.patterns)
