@@ -38,6 +38,15 @@ html(lang="en")
 			= '\n'
 			//if lt IE 9
 				script(src="static/demo/html5shiv-printshiv.js")
+				script.
+					var cfHead = document.getElementsByTagName('head')[0],
+							cfStyle = document.createElement('style');
+					cfStyle.type = 'text/css';
+					cfStyle.styleSheet.cssText = ':before,:after{content:none !important}';
+					cfHead.appendChild(cfStyle);
+					setTimeout(function(){
+							cfHead.removeChild(cfStyle);
+					}, 100);
 
 	body(style="padding:4px;")
 		each component in document.components
