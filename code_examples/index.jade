@@ -18,12 +18,13 @@ html
 						li.demo-component-list_item.wrapper(id=component.slug)
 							h1.demo-component-list_header=component.name
 							if(component.codenotes)
-								ul
+								ul.demo_codenotes
 									each note in component.codenotes
 										li
-											code(data-language="css")=note
+											pre.code
+												code=note.trim()
 							if(component.notes)
-								ul
+								ul.demo_notes
 									each note in component.notes
 										li=note
 							if(component.patterns)
@@ -34,13 +35,13 @@ html
 												if(pattern.name)
 													h3=pattern.name
 												if(pattern.codenotes)
-													ul
+													ul.demo_codenotes
 														each note in pattern.codenotes
 															li
-																pre.css
-																	code(data-language="css")=note.trim()
+																pre.code
+																	code=note.trim()
 												if(pattern.notes)
-													ul
+													ul.demo_notes
 														each note in pattern.notes
 															li=note
 											if(pattern.markup)
