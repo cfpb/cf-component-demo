@@ -77,17 +77,9 @@ body {
   line-height: 1.6;
 }
 
-.demo_notes li:before {
-  content: "\2139";
-  display: inline-block;
-  padding-right: 4px;
-  padding-bottom: 2px;
-  margin-right: 8px;
-  border-right: 1px solid #ADDC91;
-  color: #2CB34A;
-  font-size: 1.25em;
-  font-style: normal;
-  line-height: 1;
+.demo_notes li {
+  padding-left: 1em;
+  border-left: 4px solid #DBEDD4;
 }
 
 .demo-pattern-css {
