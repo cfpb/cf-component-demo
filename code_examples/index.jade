@@ -9,13 +9,13 @@ html
 		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
 		link(rel = 'stylesheet', type = 'text/css', href = 'static/demo/brackets.css')
 	body
-		.wrapper
+		.demo-wrapper
 			header.demo_header
 				h1.h5=templateData.title
 			ul.demo-component-list
 				each component in document.components
 					if(component.family == templateData.family && !component.eof)
-						li.demo-component-list_item.wrapper(id=component.slug)
+						li.demo-component-list_item.demo-wrapper(id=component.slug)
 							h1.demo-component-list_header=component.name
 							if(component.codenotes)
 								ul.demo_codenotes
