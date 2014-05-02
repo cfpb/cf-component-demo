@@ -19,9 +19,7 @@ If you're new to Capital Framework we encourage you to
 
 A CSS documentation template.
 This template lists, labels, and exposes the CSS and HTML code for each pattern.
-It uses [Rainbow](http://craig.is/making/rainbows) for syntax highlighting and
-[html5shiv](https://github.com/aFarkas/html5shiv) to polyfill the styling of
-HTML5 elements in older browsers.
+It also uses [Rainbow](http://craig.is/making/rainbows) for syntax highlighting.
 
 ![code_examples template screenshot](code_examples.png)
 
@@ -44,7 +42,8 @@ This allows you to pull the output into another HTML file.
 
 A bare bones template that simply renders the markup for each pattern.
 This is a good template if you want to browser test your patterns on an
-isolated page.
+isolated page. Optionally you can add [html5shiv](https://github.com/aFarkas/html5shiv)
+to polyfill the styling of HTML5 elements in older browsers.
 
 ![raw template screenshot](raw.png)
 
@@ -220,7 +219,7 @@ like this:
 | `templateData.html5Shiv` | | You can optionally add the HTML5 Shiv to the template by setting this option to `true`. Set it to `false` or exclude this option if you don't need it. Only used in the raw template. |
 | `templateData.ltIE9AltSource` | | A path to use if you need to serve an alternate version of your CSS to IE less than 9. Only used in the raw template. |
 | `templateData.ltIE8Source` | | A path to use if you need to include an additional stylesheet for IE less than 8. Only used in the raw template. |
-| `templateData.custom` | | A string of HTML to be appended to the raw template. Use `grunt.file.read` if you want to point to a file and convert it into a string. |
+| `templateData.custom` | | A string of HTML to be appended to the raw template. Use `grunt.file.read` if you want to point to a file and convert it into a string. Only used in the raw template. |
 
 
 #### Example Grunt task
