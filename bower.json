@@ -16,7 +16,13 @@
   },
   "license": "https://github.com/cfpb/cf-component-demo/blob/master/TERMS.md",
   "dependencies": {
+    "cf-colors": "git://github.com/cfpb/cf-colors.git",
     "html5shiv": "~3.7.0",
     "rainbow": "git://github.com/ccampbell/rainbow.git#master"
+  },
+  "exportsOverride": {
+    "html5shiv": {
+      "js": "dist/html5shiv-printshiv.min.js"
+    }
   }
 }

@@ -1,0 +1,69 @@
+!!! 5
+html
+	head
+		meta(charset = 'utf-8')
+		meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge')
+		title=templateData.title
+		meta(name="viewport", content="width=device-width,initial-scale=1.0")
+		link(rel = 'stylesheet', type = 'text/css', href = 'http://fonts.googleapis.com/css?family=Lora:400,700,400italic')
+		link(rel = 'stylesheet', type = 'text/css', href = 'static/docs/brackets.css')
+		link(rel = 'stylesheet', type = 'text/css', href = 'static/docs/docs.css')
+		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
+	body
+		div.docs-masthead
+			h1.docs-title
+				span.docs-icon
+					&lt;/&gt;
+				=' '+templateData.title
+			a.docs-repo(href=templateData.repo)
+				='view the repository'
+		each component in document.components
+			if(component.family == templateData.family && !component.eof)
+				div.docs-component(id=component.slug)
+					h2.docs-component_header
+						span
+							=component.name
+					if(component.codenotes || component.notes)
+						div.docs-component_intro
+							if(component.codenotes)
+								ul.docs-codenotes
+									each note in component.codenotes
+										li
+											pre.code
+												code=note.trim()
+							if(component.notes)
+								ul.docs-notes
+									each note in component.notes
+										li=note
+					if(component.patterns)
+						div.docs-patterns
+							each pattern in component.patterns
+								div.docs-pattern(id=pattern.slug)
+									if(pattern.name)
+										h3.docs-pattern_header=pattern.name
+									if(pattern.markup)
+										section.docs-pattern_pattern
+											!=pattern.markup
+									if(pattern.markup || pattern.codenotes || pattern.notes)
+										footer.docs-pattern_footer
+											if(pattern.markup)
+												pre.html
+													code(data-language="html")=pattern.markup.trim()
+											if(pattern.codenotes)
+												ul.docs-codenotes
+													each note in pattern.codenotes
+														li
+															pre.code
+																code=note.trim()
+											if(pattern.notes)
+												ul.docs-notes
+													each note in pattern.notes
+														li=note
+					if(component.css)
+						div.docs-css
+							pre.css
+								code(data-language="css")=component.css
+
+		script(src="static/docs/main.min.js")
+		if(templateData.jsBody)
+			script(src=templateData.jsBody)
