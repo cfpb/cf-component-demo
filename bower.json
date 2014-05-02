@@ -1,6 +1,6 @@
 {
   "name": "cf-component-demo",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "Contains Jade templates for creating docs and demos for Capital Framework components.",
   "keywords": ["capital-framework", "capital", "topdoc", "documentation", "demo"],
   "authors": [
