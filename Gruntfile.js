@@ -2,7 +2,35 @@ module.exports = function(grunt) {
 
   'use strict';
 
+  var path = require('path');
+
   grunt.initConfig({
+
+    bower: {
+      install: {
+        options: {
+          targetDir: './vendor/',
+          install: true,
+          verbose: true,
+          cleanBowerDir: true,
+          cleanTargetDir: true,
+          layout: function(type, component) {
+            return path.join(component);
+          }
+        }
+      }
+    },
+
+    less: {
+      code_examples: {
+        options: {
+          paths: grunt.file.expand('vendor/**'),
+        },
+        files: {
+          'docs/static/docs/docs.css': ['docs-src/docs.less']
+        }
+      }
+    },
 
     copy: {
       raw_HTML5Shiv: {
@@ -30,7 +58,9 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('default', ['copy', 'uglify']);
