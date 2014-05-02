@@ -22,7 +22,7 @@ module.exports = function(grunt) {
     },
 
     less: {
-      code_examples: {
+      docs: {
         options: {
           paths: grunt.file.expand('vendor/**'),
         },
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            src: ['bower_components/html5shiv/dist/html5shiv-printshiv.js'],
+            src: ['vendor/html5shiv/html5shiv-printshiv.js'],
             dest: 'raw/static/demo/',
             flatten: true
           }
@@ -48,11 +48,19 @@ module.exports = function(grunt) {
     uglify: {
       code_examples: {
         src: [
-          'bower_components/rainbow/js/rainbow.js',
-          'bower_components/rainbow/js/language/html.js',
-          'bower_components/rainbow/js/language/css.js'
+          'vendor/rainbow/js/rainbow.js',
+          'vendor/rainbow/js/language/html.js',
+          'vendor/rainbow/js/language/css.js'
         ],
         dest: 'code_examples/static/demo/main.min.js'
+      },
+      docs: {
+        src: [
+          'vendor/rainbow/js/rainbow.js',
+          'vendor/rainbow/js/language/html.js',
+          'vendor/rainbow/js/language/css.js'
+        ],
+        dest: 'docs/static/docs/main.min.js'
       }
     }
 
@@ -63,8 +71,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['copy', 'uglify']);
+  grunt.registerTask('default', ['less', 'copy', 'uglify']);
   grunt.registerTask('raw', ['copy:raw_HTML5Shiv']);
   grunt.registerTask('code_examples', ['uglify:code_examples']);
+  grunt.registerTask('docs', ['less:docs', 'uglify:docs']);
 
 };
