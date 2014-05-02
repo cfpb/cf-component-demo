@@ -24,6 +24,14 @@ It also uses [Rainbow](http://craig.is/making/rainbows) for syntax highlighting.
 ![code_examples template screenshot](code_examples.png)
 
 
+### docs
+
+An updated version of code_examples. As soon as docs has been tested enough it
+will eventually replace code_examples.
+
+![docs template screenshot](docs.png)
+
+
 ### simple
 
 A simple template to list and label each pattern.
