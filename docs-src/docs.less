@@ -97,16 +97,21 @@ pre {
 .docs-repo {
   @font-size: 14px;
 
-  float: right;
-  display: inline-block;
-  padding-bottom: 2px;
-  color: @white;
-  border-bottom: 1px dotted @navy-20;
-  .codefont();
-  font-size: unit(@font-size / @base-font-size-px, em);
-  font-weight: normal;
-  line-height: unit(20px / @font-size);
-  text-decoration: none;
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    float: right;
+    display: inline-block;
+    padding-bottom: 2px;
+    color: @white;
+    border-bottom: 1px dotted @navy-20;
+    .codefont();
+    font-size: unit(@font-size / @base-font-size-px, em);
+    font-weight: normal;
+    line-height: unit(20px / @font-size);
+    text-decoration: none;
+  }
 }
 
 
@@ -125,6 +130,7 @@ pre {
   @font-size: @margin;
 
   margin: unit((@padding * .5) / @font-size, em) 0 1em;
+  color: @neutral;
   .webfont();
   font-size: unit(@font-size / @base-font-size-px, em);
   font-weight: bold;
@@ -132,7 +138,7 @@ pre {
   span {
     display: inline-block;
     padding-bottom: 1px;
-    border-bottom: 3px solid @black;
+    border-bottom: 3px solid @neutral;
   }
 }
 
@@ -176,9 +182,11 @@ pre {
   border-top-left-radius: @radius;
   border-top-right-radius: @radius;
   background: @white;
+  color: @neutral;
   .webfont();
   font-size: unit(@font-size / @base-font-size-px, em);
   font-weight: bold;
+  line-height: 1;
 }
 
 .docs-pattern_pattern {
@@ -197,7 +205,7 @@ pre {
   border-bottom-right-radius: @radius;
 }
 
-.docs-pattern_footer .html {
+.docs-pattern_footer .docs-pattern_markup {
   margin:
     unit(-@padding / @code-size, em)
     unit(-@padding / @code-size, em)
@@ -214,9 +222,7 @@ pre {
 /* Notes and code
    ========================================================================== */
 
-.code,
-.css,
-.html {
+.docs-code {
   margin: 0;
   background: @gray-5;
   .light-border();
@@ -270,21 +276,15 @@ pre {
   margin-top: 1em;
 }
 
-.docs-codenotes .code,
-.docs-codenotes .css,
-.docs-codenotes .html {
+.docs-codenotes .docs-code {
   display: inline-block;
   padding: unit(6px / @code-size, em) unit(10px / @code-size, em);
-  background: @neutral;
-  border: 1px solid darken(@neutral, 10%);
-
-  code {
-    color: @white;
-  }
+  background: @white;
+  border: 1px solid @gray-50;
 }
 
-.html + .docs-codenotes,
-.html + .docs-notes {
+.docs-pattern_markup + .docs-codenotes,
+.docs-pattern_markup + .docs-notes {
   margin-top: unit(@padding / 14px, em);
 }
 
@@ -303,7 +303,7 @@ pre {
 
   .docs-css {
     width: 45%;
-    margin: unit(68px / @base-font-size-px, em) 0 0;
+    margin: unit(63px / @base-font-size-px, em) 0 0;
     padding-left: unit(@padding / @base-font-size-px, em);
   }
 

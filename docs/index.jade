@@ -29,7 +29,7 @@ html
 								ul.docs-codenotes
 									each note in component.codenotes
 										li
-											pre.code
+											pre.docs-code
 												code=note.trim()
 							if(component.notes)
 								ul.docs-notes
@@ -47,13 +47,13 @@ html
 									if(pattern.markup || pattern.codenotes || pattern.notes)
 										footer.docs-pattern_footer
 											if(pattern.markup)
-												pre.html
+												pre.docs-code.docs-pattern_markup
 													code(data-language="html")=pattern.markup.trim()
 											if(pattern.codenotes)
 												ul.docs-codenotes
 													each note in pattern.codenotes
 														li
-															pre.code
+															pre.docs-code
 																code=note.trim()
 											if(pattern.notes)
 												ul.docs-notes
@@ -61,7 +61,7 @@ html
 														li=note
 					if(component.css)
 						div.docs-css
-							pre.css
+							pre.docs-code
 								code(data-language="css")=component.css
 
 		script(src="static/docs/main.min.js")
