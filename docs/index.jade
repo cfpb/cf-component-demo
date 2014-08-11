@@ -49,6 +49,16 @@ html
 											if(pattern.markup)
 												pre.docs-code.docs-pattern_markup
 													code(data-language="html")=pattern.markup.trim()
+											if(pattern.markup)
+												- function convertToGHPagesURL(ghURL) {
+													- var info = ghURL.replace('https://github.com/','').replace('.git','').split('/');
+													- return 'http://' + info[0] + '.github.io/' + info[1];
+												- }
+												- var data = { css: "body { padding: 1em; }", css_external: convertToGHPagesURL(templateData.repo) + '/' + document.source, html: pattern.markup };
+												- var JSONstring = JSON.stringify(data).replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+												form(action="http://codepen.io/pen/define", method="POST", target="_blank").docs-pattern_footer-edit
+													input(type="hidden", name="data", value=JSONstring)
+													input(type="submit", value="edit on codepen.io").docs-pattern_footer-edit-btn
 											if(pattern.codenotes)
 												ul.docs-codenotes
 													each note in pattern.codenotes
