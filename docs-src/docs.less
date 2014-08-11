@@ -218,6 +218,23 @@ pre {
   background: transparent;
 }
 
+.docs-pattern_footer-edit {
+  position: relative;
+}
+
+.docs-pattern_footer-edit-btn {
+  @code-size: 11px;
+  position: absolute;
+  right: unit(-(@padding + 1) / @code-size, em);
+  bottom: 0;
+  border: 0;
+  border-top-left-radius: @radius;
+  background: @gray-20;
+  color: @darkgray;
+  .codefont();
+  font-size: @code-size;
+}
+
 
 /* Notes and code
    ========================================================================== */
