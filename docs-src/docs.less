@@ -223,14 +223,14 @@ pre {
 }
 
 .docs-pattern_footer-edit-btn {
-  @code-size: 11px;
+  @code-size: 10px;
   position: absolute;
   right: unit(-(@padding + 1) / @code-size, em);
   bottom: 0;
-  border: 0;
+  .light-border();
   border-top-left-radius: @radius;
-  background: @gray-20;
-  color: @darkgray;
+  background: transparent;
+  color: @gray;
   .codefont();
   font-size: @code-size;
 }
