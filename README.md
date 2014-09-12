@@ -1,15 +1,15 @@
 # cf-component-demo
 
 Contains [Jade](http://jade-lang.com/) templates for creating docs and demos
-for [Capital Framework](http://cfpb.github.io/capital-framework/) components.
+for [Capital Framework](https://cfpb.github.io/capital-framework/) components.
 
 They are built to be consumed by [Topdoc](https://github.com/topcoat/topdoc)
 (a tool for generating usage guides for CSS).
-We use Topdoc in a Gruntfile via the [`grunt-topdoc`](https://github.com/topcoat/grunt-topdoc)
-task.
+We use Topdoc in a Gruntfile via the
+[`grunt-topdoc`](https://github.com/topcoat/grunt-topdoc) task.
 
 If you're new to Capital Framework we encourage you to
-[start here](http://cfpb.github.io/capital-framework/).
+[start here](https://cfpb.github.io/capital-framework/).
 
 
 ## The templates:
@@ -252,3 +252,18 @@ topdoc: {
   }
 }
 ```
+
+## Getting involved
+
+We welcome your feedback and contributions.
+
+- [Find out about contributing](CONTRIBUTING.md)
+- File a bug using this [handy template](https://github.com/cfpb/cf-component-demo/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug)
+
+
+---
+
+## Open source licensing info
+1. [TERMS](TERMS.md)
+2. [LICENSE](LICENSE)
+3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)

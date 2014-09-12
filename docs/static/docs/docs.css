@@ -1,3 +1,4 @@
+@import url(//fast.fonts.net/t/1.css?apiType=css&projectid=44e8c964-4684-44c6-a6e3-3f3da8787b50);
 /* ==========================================================================
    Capital Framework
    cf-component-demo styling
@@ -31,7 +32,7 @@ pre {
   display: inline-block;
   margin: 0;
   color: #ffffff;
-  font-family: source-code-pro, 'Source Code Pro', Courier, monospace;
+  font-family: Calibri, Monaco, Courier, monospace !important;
   font-size: 1.25em;
   font-weight: normal;
 }
@@ -54,7 +55,7 @@ pre {
   padding-bottom: 2px;
   color: #ffffff;
   border-bottom: 1px dotted #ccd5e3;
-  font-family: source-code-pro, 'Source Code Pro', Courier, monospace;
+  font-family: Calibri, Monaco, Courier, monospace !important;
   font-size: 0.875em;
   font-weight: normal;
   line-height: 1.42857143;
@@ -155,7 +156,7 @@ pre {
   border-top-left-radius: 3px;
   background: transparent;
   color: #75787b;
-  font-family: source-code-pro, 'Source Code Pro', Courier, monospace;
+  font-family: Calibri, Monaco, Courier, monospace !important;
   font-size: 10px;
 }
 /* Notes and code
