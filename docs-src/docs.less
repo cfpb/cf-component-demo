@@ -239,6 +239,13 @@ pre {
   color: @gray;
   .codefont();
   font-size: @code-size;
+
+  &:focus {
+    outline: 1px dotted @black;
+    // outline-offset is not supported everywhere but it adds a nice touch
+    // in browsers where it is.
+    outline-offset: 1px;
+  }
 }
 
 

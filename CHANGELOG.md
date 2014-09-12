@@ -19,6 +19,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
   notes or codenotes.
 - A few visual tweaks to the "edit on codepen" button to make it slightly more
   noticeable.
+- Focus style for the "edit on codeben" button
 
 
 ## 0.8.1 - 2014-09-12
