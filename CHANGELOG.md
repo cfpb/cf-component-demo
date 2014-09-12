@@ -12,7 +12,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - Nothing.
 
 ### Removed
-- Unnecesary properties from `bower.json`.
+- Unnecessary properties from `bower.json`.
 
 ### Fixed
 - Better source code typefaces.
