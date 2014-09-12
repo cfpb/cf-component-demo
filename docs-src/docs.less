@@ -38,7 +38,7 @@
 }
 
 .codefont() {
-  font-family: Calibri, Monaco, Courier, monospace !important;
+  font-family: Consolas, Menlo, Monaco, Courier, monospace !important;
 }
 
 .light-border() {
@@ -220,19 +220,32 @@ pre {
 
 .docs-pattern_footer-edit {
   position: relative;
+
+  + .docs-notes,
+  + .docs-codenotes {
+    margin-top: unit(@padding / 14, em);
+  }
 }
 
 .docs-pattern_footer-edit-btn {
-  @code-size: 10px;
+  @code-size: 12px;
   position: absolute;
   right: unit(-(@padding + 1) / @code-size, em);
   bottom: 0;
+  padding: 0.25em 0.5em;
   .light-border();
   border-top-left-radius: @radius;
-  background: transparent;
+  background: @gray-10;
   color: @gray;
   .codefont();
   font-size: @code-size;
+
+  &:focus {
+    outline: 1px dotted @black;
+    // outline-offset is not supported everywhere but it adds a nice touch
+    // in browsers where it is.
+    outline-offset: 1px;
+  }
 }
 
 
@@ -244,6 +257,7 @@ pre {
   background: @gray-5;
   .light-border();
   border-radius: @radius;
+  .codefont();
   font-size: @code-size;
 }
 
@@ -286,6 +300,7 @@ pre {
 .docs-codenotes {
   padding-left: 0;
   margin: 0;
+  .codefont();
   list-style-type: none;
 }
 
