@@ -130,6 +130,7 @@ pre {
   line-height: 1;
   text-decoration: none;
   transition: 0.2s padding-left;
+  border-bottom-width: 0 !important;
 }
 .docs-nav_link:visited,
 .docs-nav_link.visited {
