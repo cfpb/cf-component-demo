@@ -2,6 +2,21 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.9.0 - 2014-11-04
+
+### Added
+- Sidebar nav linking to other component docs.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Replaced all tabs with spaces in the docs Jade template.
+
+
 ## 0.8.2 - 2014-09-12
 
 ### Added
