@@ -4,11 +4,20 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
-## 0.9.0 - 2015-01-06
+## 0.9.1 - 2015-01-06
 
 ### Added
 - docs and raw templates will now include Modernizr if that option is set in
   `templateData`.
+
+
+## 0.9.0 - 2014-11-04
+
+### Added
+- Sidebar nav linking to other component docs.
+
+### Changed
+- Replaced all tabs with spaces in the docs Jade template.
 
 
 ## 0.8.2 - 2014-09-12
