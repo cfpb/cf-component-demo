@@ -51,10 +51,9 @@ html(lang="en", class="no-js")
 								cfHead.removeChild(cfStyle);
 						}, 300);
 
-		script.
-			// Confirm availability of JS and remove no-js class from html
-			var docElement = document.documentElement;
-			docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+		if(templateData.modernizr)
+			= '\n'
+			script(src="static/js/modernizr-custom.js")
 
 	body(style="padding:4px;")
 		each component in document.components

@@ -21,10 +21,8 @@ html(lang="en", class="no-js")
 		link(rel = 'stylesheet', type = 'text/css', href = 'static/docs/brackets.css')
 		link(rel = 'stylesheet', type = 'text/css', href = 'static/docs/docs.css')
 		link(rel = 'stylesheet', type = 'text/css', href = document.relativeSource)
-		script.
-			// Confirm availability of JS and remove no-js class from html
-			var docElement = document.documentElement;
-			docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+		if(templateData.modernizr)
+			script(src="static/js/modernizr-custom.js")
 	body
 		div.docs-masthead
 			h1.docs-title

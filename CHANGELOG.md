@@ -1,19 +1,19 @@
+# Change Log
+
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
-## 0.8.2 - 2014-09-12
+## 0.9.0 - 2015-01-06
 
 ### Added
-- Nothing.
+- docs and raw templates will now include Modernizr if that option is set in
+  `templateData`.
 
-### Deprecated
-- Nothing.
 
-### Removed
-- Nothing.
+## 0.8.2 - 2014-09-12
 
-### Fixed
+### Changed
 - Correct source code typeface, now set in the right places.
 - Added a little margin under the "edit on codepen" button when followed by
   notes or codenotes.
@@ -28,13 +28,10 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - `.no-js` support to the Docs and Raw templates.
 - IE conditional classes to the Docs template.
 
-### Deprecated
-- Nothing.
-
 ### Removed
 - Unnecessary properties from `bower.json`.
 
-### Fixed
+### Changed
 - Better source code typefaces.
 - Updated dependencies to latest versions.
 - Updated meta docs to latest versions.
