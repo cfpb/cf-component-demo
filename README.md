@@ -224,6 +224,7 @@ like this:
 | `templateData.title` | required | A title to give to the page. It's used in `<title>`. It's also used as an `<h1>` for the page in the code_examples and simple templates. |
 | `templateData.family` | required | This is the identifier that should also be used in the component's Topdoc comments. It is used to ignore any other Topdoc comments that might come from dependencies. |
 | `templateData.repo` | required | A link to the repository. The code_examples template uses this to link out to the source code. |
+| `templateData.navItems` | | An array of items to be used when creating the left-hand nav. Should be formatted as follows: `[ ['Nav label 1', '#nav-url-1' ], ['Nav label 2', '#nav-url-2' ] ]`. When this option is not present within the Topdoc task a default array is used and will link to a hard-coded set of Capital Framework docs. |
 | `templateData.html5Shiv` | | You can optionally add the HTML5 Shiv to the template by setting this option to `true`. Set it to `false` or exclude this option if you don't need it. Only used in the raw template. |
 | `templateData.ltIE9AltSource` | | A path to use if you need to serve an alternate version of your CSS to IE less than 9. Only used in the raw template. |
 | `templateData.ltIE8Source` | | A path to use if you need to include an additional stylesheet for IE less than 8. Only used in the raw template. |
