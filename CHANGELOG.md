@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.10.0 - 2015-01-14
+
+### Added
+- You can now customize the left-hand nav by creating `navItems` within the
+  Topdoc task options.
+
+
 ## 0.9.1 - 2015-01-06
 
 ### Added

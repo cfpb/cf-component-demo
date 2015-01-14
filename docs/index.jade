@@ -91,35 +91,25 @@ html(lang="en", class="no-js")
                                     pre.docs-code
                                         code(data-language="css")=component.css
 
+            if(typeof templateData.navItems === 'undefined')
+                - var navItems = []
+                - navItems.push(['cf-core',         'https://cfpb.github.io/cf-core/docs/'])
+                - navItems.push(['cf-buttons',      'https://cfpb.github.io/cf-buttons/docs/'])
+                - navItems.push(['cf-expandables',  'https://cfpb.github.io/cf-expandables/docs/'])
+                - navItems.push(['cf-forms',        'https://cfpb.github.io/cf-forms/docs/'])
+                - navItems.push(['cf-grid',         'https://cfpb.github.io/cf-grid/docs/'])
+                - navItems.push(['cf-icons',        'https://cfpb.github.io/cf-icons/docs/'])
+                - navItems.push(['cf-layout',       'https://cfpb.github.io/cf-layout/docs/'])
+                - navItems.push(['cf-pagination',   'https://cfpb.github.io/cf-pagination/docs/'])
+                - navItems.push(['cf-typography',   'https://cfpb.github.io/cf-typography/docs/'])
+                - templateData.navItems = navItems;
+
             div.docs-sidebar-wrapper_sidebar
                 ul.docs-nav
-                    li.docs-nav_item
-                        a.docs-nav_link(href="https://cfpb.github.io/cf-core/docs/")
-                          ='cf-core'
-                    li.docs-nav_item
-                        a.docs-nav_link(href="https://cfpb.github.io/cf-buttons/docs/")
-                          ='cf-buttons'
-                    li.docs-nav_item
-                        a.docs-nav_link(href="https://cfpb.github.io/cf-expandables/docs/")
-                          ='cf-expandables'
-                    li.docs-nav_item
-                        a.docs-nav_link(href="https://cfpb.github.io/cf-forms/docs/")
-                          ='cf-forms'
-                    li.docs-nav_item
-                        a.docs-nav_link(href="https://cfpb.github.io/cf-grid/docs/")
-                          ='cf-grid'
-                    li.docs-nav_item
-                        a.docs-nav_link(href="https://cfpb.github.io/cf-icons/docs/")
-                          ='cf-icons'
-                    li.docs-nav_item
-                        a.docs-nav_link(href="https://cfpb.github.io/cf-layout/docs/")
-                          ='cf-layout'
-                    li.docs-nav_item
-                        a.docs-nav_link(href="https://cfpb.github.io/cf-pagination/docs/")
-                          ='cf-pagination'
-                    li.docs-nav_item
-                        a.docs-nav_link(href="https://cfpb.github.io/cf-typography/docs/")
-                          ='cf-typography'
+                    each component in templateData.navItems
+                        li.docs-nav_item
+                            a.docs-nav_link(href=component[1])
+                                =component[0]
 
         script(src="static/docs/main.min.js")
         if(templateData.jsBody)
