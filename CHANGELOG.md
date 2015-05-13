@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.9.2 - 2015-05-13
+
+### Changed
+- Removed Avenir from the code examples
+
 ## 0.9.1 - 2015-01-06
 
 ### Added
