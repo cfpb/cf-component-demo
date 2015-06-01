@@ -1,7 +1,7 @@
 {
   "name": "cf-component-demo",
   "dependencies": {
-    "cf-core": "git://github.com/cfpb/cf-core.git#0.5.0",
+    "cf-core": "^1.0.0",
     "html5shiv": "~3.7.2",
     "rainbow": "git://github.com/ccampbell/rainbow.git#master"
   },

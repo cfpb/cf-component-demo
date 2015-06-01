@@ -86,10 +86,6 @@ html(lang="en", class="no-js")
                                                         ul.docs-notes
                                                             each note in pattern.notes
                                                                 li=note
-                            if(component.css)
-                                div.docs-css
-                                    pre.docs-code
-                                        code(data-language="css")=component.css
 
             div.docs-sidebar-wrapper_sidebar
                 ul.docs-nav

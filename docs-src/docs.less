@@ -4,8 +4,8 @@
    ========================================================================== */
 
 
-@import (reference) "../vendor/cf-core/cf-core.less";
-
+@import "../vendor/cf-core/src/cf-core.less";
+@import "brand-palette.less";
 
 /* Variables
    ========================================================================== */
@@ -223,15 +223,6 @@ pre {
   margin-top: unit(@padding / @base-font-size-px, em);
 }
 
-
-/* CSS
-   ========================================================================== */
-
-.docs-css {
-  margin-top: unit(@padding / @base-font-size-px, em);
-}
-
-
 /* Patterns
    ========================================================================== */
 
@@ -386,24 +377,3 @@ pre {
 .docs-pattern_markup + .docs-notes {
   margin-top: unit(@padding / 14px, em);
 }
-
-
-/* Responsive
-   ========================================================================== */
-
-.respond-to-min( 1024px, {
-
-  .docs-patterns,
-  .docs-css {
-    box-sizing: border-box;
-    float: left;
-    width: 55%;
-  }
-
-  .docs-css {
-    width: 45%;
-    margin: unit(63px / @base-font-size-px, em) 0 0;
-    padding-left: unit(@padding / @base-font-size-px, em);
-  }
-
-});
