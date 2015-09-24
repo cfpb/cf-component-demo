@@ -4,7 +4,7 @@
    ========================================================================== */
 
 
-@import "../vendor/cf-core/src/cf-core.less";
+@import (reference) "../vendor/cf-core/cf-core.less";
 @import "brand-palette.less";
 
 /* Variables
@@ -227,7 +227,7 @@ pre {
    ========================================================================== */
 
 .docs-pattern + .docs-pattern {
-  margin-top: unit(@margin / @base-font-size-px, em);  
+  margin-top: unit(@margin / @base-font-size-px, em);
 }
 
 .docs-pattern_header {
