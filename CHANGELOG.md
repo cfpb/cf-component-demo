@@ -4,10 +4,20 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
-## 0.9.2 - 2015-05-13
+## 1.0.0 - 2015-05-28
 
 ### Changed
-- Removed Avenir from the code examples
+- Updated to work with CF v1 components.
+
+### Removed
+- Removed CSS sidebar from Docs template.
+
+
+## 0.9.2 - 2015-05-13
+
+### Removed
+- Removed Avenir from the code examples.
+
 
 ## 0.9.1 - 2015-01-06
 
@@ -33,7 +43,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
   notes or codenotes.
 - A few visual tweaks to the "edit on codepen" button to make it slightly more
   noticeable.
-- Focus style for the "edit on codepen" button
+- Focus style for the "edit on codepen" button.
 
 
 ## 0.8.1 - 2014-09-12
