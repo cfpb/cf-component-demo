@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 1.0.1 - 2015-09-24
+
+### Fixed
+- Reverted importing of `cf-core.less` to be by `(reference)` so that vars and mixins
+  may be used in docs.less without dumping the whole of cf-core into the compiled CSS.
+- Reverted `.bowerrc`'s `directory` to `bower_components` so that `grunt bower` resumes
+  functioning correctly.
+
+### Changed
+- Updated Rainbow dependency because it's now a normal Bower package.
+
+
 ## 1.0.0 - 2015-05-28
 
 ### Changed
